@@ -1,16 +1,18 @@
 <script>
 	let loged = false;
-	let username;
+	let username = (loged) =>{
 	if(username =='onodev'){
 		loged = true;
 	}
+}
 </script>
 <main>
-	{#if loged}
+	<!-- {#if !loged}
 	<input bind:value={username} type="text" placeholder="Enter Your Username">
-	{:else }
+	<button type="submit" on:click={username}>Submit</button>
+	{:else } -->
 	<a href="/generatorImage">Generate AI image</a>
-	{/if}
+	<!-- {/if} -->
 </main>
 
 <style>
