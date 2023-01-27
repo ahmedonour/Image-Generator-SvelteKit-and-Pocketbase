@@ -37,4 +37,17 @@
 		padding: 3rem 3rem;
 		font-size: 5.5rem;
 	}
+	@media (max-width: 430px){
+		a{
+			font-size: 2rem;
+			padding: 1rem 1rem;
+			box-shadow: inset -5px 5px 5px rgba(255, 255, 255, 0.3);
+		}
+		a:hover {
+		box-shadow: inset -10px 10px 10px rgba(255, 255, 255, 0.3);
+		padding: 2rem 2rem;
+		font-size: 2.5rem;
+	}
+		
+	}
 </style>
