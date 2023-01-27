@@ -1,6 +1,6 @@
 <script>
 	import { Configuration, OpenAIApi } from 'openai';
-
+	import Translating from '../../components/Translating.svelte';
 	let prompt = '';
 	let result = '';
 	let loading = false;
@@ -26,6 +26,7 @@
 </script>
 
 <main class="app-main">
+	<Translating inputText={prompt} />
 	{#if loading}
 		<h2>Generating..Please Wait..</h2>
 		<div class="lds-ripple">
