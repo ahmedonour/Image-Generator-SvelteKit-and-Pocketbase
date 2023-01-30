@@ -1,4 +1,6 @@
 <script>
+	import Darkmode from "../components/darkmode.svelte";
+
 	let loged = false;
 	let username = (loged) =>{
 	if(username =='onodev'){
@@ -12,10 +14,22 @@
 	<button type="submit" on:click={username}>Submit</button>
 	{:else } -->
 	<a href="/generatorImage">Generate AI image</a>
+	<Darkmode>
+		فاتح / مظلم
+	</Darkmode>
 	<!-- {/if} -->
 </main>
 
 <style>
+	:global(body){
+		background-color: #000000;
+		color: #ffffff;
+		transition: background-color 0.3s;
+	}
+	:global(body.dark-mode){
+		background-color: #ffffff;
+		color: #000000;
+	}
 	@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 	main {
 		width: 100vw;
