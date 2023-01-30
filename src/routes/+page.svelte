@@ -1,36 +1,35 @@
 <script>
-	import Darkmode from "../components/darkmode.svelte";
+	import Darkmode from '../components/darkmode.svelte';
 
 	let loged = false;
-	let username = (loged) =>{
-	if(username =='onodev'){
-		loged = true;
-	}
-}
+	let username = (loged) => {
+		if (username == 'onodev') {
+			loged = true;
+		}
+	};
 </script>
+
 <main>
 	<!-- {#if !loged}
 	<input bind:value={username} type="text" placeholder="Enter Your Username">
 	<button type="submit" on:click={username}>Submit</button>
 	{:else } -->
 	<a href="/generatorImage">Generate AI image</a>
-	<Darkmode>
-		فاتح / مظلم
-	</Darkmode>
+	<Darkmode>فاتح / مظلم</Darkmode>
 	<!-- {/if} -->
 </main>
 
 <style>
-	:global(body){
+	@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+	:global(body) {
 		background-color: #000000;
 		color: #ffffff;
 		transition: background-color 0.3s;
 	}
-	:global(body.dark-mode){
+	:global(body.dark-mode) {
 		background-color: #ffffff;
 		color: #000000;
 	}
-	@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 	main {
 		width: 100vw;
 		height: 100vh;
@@ -53,17 +52,16 @@
 		padding: 3rem 3rem;
 		font-size: 5.5rem;
 	}
-	@media (max-width: 430px){
-		a{
+	@media (max-width: 430px) {
+		a {
 			font-size: 2rem;
 			padding: 1rem 1rem;
 			box-shadow: inset -5px 5px 5px rgba(255, 255, 255, 0.3);
 		}
 		a:hover {
-		box-shadow: inset -10px 10px 10px rgba(255, 255, 255, 0.3);
-		padding: 2rem 2rem;
-		font-size: 2.5rem;
-	}
-		
+			box-shadow: inset -10px 10px 10px rgba(255, 255, 255, 0.3);
+			padding: 2rem 2rem;
+			font-size: 2.5rem;
+		}
 	}
 </style>

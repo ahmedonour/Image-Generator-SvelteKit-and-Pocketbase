@@ -1,11 +1,10 @@
 <script>
 	import { Configuration, OpenAIApi } from 'openai';
 
-
 	let sourceLanguage = 'ar';
 	let targetLanguage = 'en';
 	export let text = '';
-	let translatedText= '';
+	let translatedText = '';
 	// Translation API
 	async function translate() {
 		const encodedParams = new URLSearchParams();
@@ -25,8 +24,7 @@
 		const transText = await response.json();
 
 		console.log(transText.data);
-		translatedText =  transText.data.translatedText
-		
+		translatedText = transText.data.translatedText;
 	}
 	//AI REQ
 	let prompt = translatedText;
@@ -49,7 +47,7 @@
 	const openai = new OpenAIApi(configuration);
 
 	const generateImage = async () => {
-		await translate()
+		await translate();
 		placeholder = `Search ${text}..`;
 		loading = true;
 		const res = await openai.createImage({
@@ -72,7 +70,6 @@
 </script>
 
 <main class="app-main">
-
 	{#if loading}
 		<h2>Generating..Please Wait..</h2>
 		<div class="lds-ripple">
@@ -100,43 +97,43 @@
 		<div class="images">
 			{#if result.length > 0}
 				<img class="result-image" src={result} alt="result" />
-				<a class="btn" href={result} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result1.length > 0}
 				<img class="result-image" src={result1} alt="result" />
-				<a class="btn" href={result1} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result1} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result2.length > 0}
 				<img class="result-image" src={result2} alt="result" />
-				<a class="btn" href={result2} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result2} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result3.length > 0}
 				<img class="result-image" src={result3} alt="result" />
-				<a class="btn" href={result3} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result3} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result4.length > 0}
 				<img class="result-image" src={result4} alt="result" />
-				<a class="btn" href={result4} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result4} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result5.length > 0}
 				<img class="result-image" src={result5} alt="result" />
-				<a class="btn" href={result5} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result5} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result6.length > 0}
 				<img class="result-image" src={result6} alt="result" />
-				<a class="btn" href={result6} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result6} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result7.length > 0}
 				<img class="result-image" src={result7} alt="result" />
-				<a class="btn" href={result7} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result7} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result8.length > 0}
 				<img class="result-image" src={result8} alt="result" />
-				<a class="btn" href={result8} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result8} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 			{#if result9.length > 0}
 				<img class="result-image" src={result9} alt="result" />
-				<a class="btn" href={result9} target='_blank' rel='noreferrer' download>تنزيل</a>
+				<a class="btn" href={result9} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
 		</div>
 	{/if}
@@ -144,16 +141,16 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
-	.images{
-	width: 70vw;
-	height: fit-content;
-	background-color: #0A0019;
-	padding: 2rem 4rem;
-	border-radius: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	.images {
+		width: 70vw;
+		height: fit-content;
+		background-color: #0a0019;
+		padding: 2rem 4rem;
+		border-radius: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 	h2 {
 		font-family: 'Belleza', sans-serif;
@@ -193,13 +190,12 @@
 		font-size: 1.5rem;
 		border: none;
 		border-radius: 10px;
-		box-shadow: inset -5px 5px 5px rgba(255, 255, 255, 0.3),
-			inset 5px -5px 5px rgba(0, 0, 0, 0.3);
+		box-shadow: inset -5px 5px 5px rgba(255, 255, 255, 0.3), inset 5px -5px 5px rgba(0, 0, 0, 0.3);
 	}
-	.g-btn{
-	background-color: #0A0019;
-	color: #fff;
-	margin-bottom: 2rem;
+	.g-btn {
+		background-color: #0a0019;
+		color: #fff;
+		margin-bottom: 2rem;
 	}
 	.btn {
 		background-color: rgb(252, 177, 39);
@@ -209,8 +205,7 @@
 		font-size: 1.5rem;
 		border: none;
 		border-radius: 10px;
-		box-shadow: inset -5px 5px 5px rgba(255, 255, 255, 0.3),
-			inset 5px -5px 5px rgba(0, 0, 0, 0.3);
+		box-shadow: inset -5px 5px 5px rgba(255, 255, 255, 0.3), inset 5px -5px 5px rgba(0, 0, 0, 0.3);
 	}
 	.result-image {
 		margin: 20px;
