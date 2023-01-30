@@ -1,6 +1,6 @@
 <script>
     // import { request } from '@sveltech/routify/fetch'
-    import axios from "axios";  
+import axios from "axios";  
     export let inputText = '';
 
     async function handleSubmit() {
@@ -20,9 +20,9 @@
         body: encodedParams
       };
   
-      const response = await request(options);
-      const translation = await response.json();
-      console.log(translation);
+      const response = await axios.request(options);
+     const translation = await response.json();
+      console.log(response.data);
     }
   </script>
   
