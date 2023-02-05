@@ -16,7 +16,7 @@
 		transition: background-color 1s;
 	}
 	:global(body.dark-mode) {
-		background-color: #ffffc7;
+		background-color: #fffff5;
 		color: #181818;
 	}
 	main {

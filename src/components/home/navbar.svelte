@@ -4,9 +4,11 @@
 <nav>
     <Darkmode></Darkmode>
     <div class="logo">
-        <img src="/Logo-Text-1.png" alt="" srcset="">
-        
-        <img src="/Logo-Text.png" alt="" srcset="">
+        <a href="/">
+            <img src="/Logo-Text-1.png" alt="" srcset="">
+            
+            <img src="/Logo-Text.png" alt="" srcset="">
+        </a>
     </div>
 </nav>
 <style>
