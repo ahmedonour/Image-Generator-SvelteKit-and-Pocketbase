@@ -17,6 +17,9 @@
     :global(body.dark-mode) nav img:nth-of-type(2){
         display: flex;
     }
+    :global(body.dark-mode) nav img:nth-of-type(1){
+        display: none;
+    }
     nav{
         margin-top: 1rem;
         width: 80vw;
