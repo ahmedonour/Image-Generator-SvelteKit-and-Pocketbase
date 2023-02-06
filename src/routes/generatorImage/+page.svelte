@@ -1,5 +1,6 @@
 <script>
 	import { Configuration, OpenAIApi } from 'openai';
+	import { fly } from 'svelte/transition';
 
 	let sourceLanguage = 'ar';
 	let targetLanguage = 'en';
@@ -69,7 +70,7 @@
 	};
 </script>
 
-<main class="app-main">
+<main class="app-main" transition:fly={{ x: 200, duration: 1000 }}>
 	{#if loading}
 		<h2>الرجاء اﻹنتظار</h2>
 		<div class="lds-ripple">
@@ -166,7 +167,7 @@
 	}
 	h2 {
 		font-size: 1.2rem;
-		font-weight: 300;
+		font-weight: 500;
 		font-family: 'Cairo', sans-serif;
 		text-align: center;
 		margin-top: 2rem;
@@ -213,6 +214,7 @@
 	.g-btn {
 		margin-top: 2rem;
 		color: #fff;
+		cursor: pointer;
 	}
 	.btn {
 		width: 50%;

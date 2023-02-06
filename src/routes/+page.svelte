@@ -1,9 +1,9 @@
 <script>
 	import Circles from '../components/home/circles.svelte';
-	import Profe from '../components/home/Profe.svelte';
-</script>
+	import Profe from '../components/home/Profe.svelte';	
+	</script>
 
-<main>
+<main  >
 	<Circles />
 	<Profe/>
 </main>

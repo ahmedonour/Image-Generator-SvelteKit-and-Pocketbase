@@ -19,7 +19,7 @@
         height: 70vh;
     }
     .circle-1{
-        width: 100vw;
+        width: 80vw;
         height: 60vh;
         border-radius: 40rem;
         background-color: rgba(252, 0, 0);
@@ -31,5 +31,15 @@
         border-radius: 40rem;
         background-color: #237bff;
         filter: blur(70px);
+    }
+    @media (min-width: 768px) and (min-width: 1024px){
+        .circle-1{
+            background-color: rgba(252, 0, 0, 0.7);
+            /* filter: blur(200px); */
+        }
+        .circle-2{
+            /* filter: blur(200px); */
+            background-color: rgba(35, 123, 255, 0.7);
+        }
     }
 </style>
