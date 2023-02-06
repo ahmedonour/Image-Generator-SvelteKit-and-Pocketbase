@@ -40,7 +40,8 @@
 	// let result8 = '';
 	// let result9 = '';
 	let loading = false;
-	let placeholder = 'مثال : صورة مقربة , استوديو باﻷبيض و اﻷسود للموضوع, إضاءة خلفية مثيرة , 1973 صورة من مجلة لايف';
+	let placeholder =
+		'مثال : صورة مقربة , استوديو باﻷبيض و اﻷسود للموضوع, إضاءة خلفية مثيرة , 1973 صورة من مجلة لايف';
 	// Search Bears with Paint Brushes the Starry Night, painted by Vincent Van Gogh..
 	const configuration = new Configuration({
 		apiKey: import.meta.env.VITE_Open_AI_Key
@@ -70,6 +71,19 @@
 	};
 </script>
 
+<svelte:head>
+	<title>صفحة إنشاء الصور</title>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSQEDKWQ54"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-RSQEDKWQ54');
+	</script>
+</svelte:head>
 <main class="app-main" transition:fly={{ x: 200, duration: 1000 }}>
 	{#if loading}
 		<h2>الرجاء اﻹنتظار</h2>
@@ -136,22 +150,22 @@
 </main>
 
 <style>
-	:global(body.dark-mode) .app-input{
+	:global(body.dark-mode) .app-input {
 		transition: all 1s;
 		box-shadow: var(--Neo-Shadow);
 		color: #000;
 	}
-	:global(body.dark-mode) .g-btn{
+	:global(body.dark-mode) .g-btn {
 		color: black;
 		box-shadow: var(--Neo-Shadow);
 		transition: all 1s;
 	}
-	:global(body.dark-mode) .btn{
+	:global(body.dark-mode) .btn {
 		color: black;
 		box-shadow: var(--Neo-Shadow);
 		transition: all 1s;
 	}
-	:global(body.dark-mode) .lds-ripple div{
+	:global(body.dark-mode) .lds-ripple div {
 		border: 4px solid #000;
 	}
 	.images {
@@ -197,7 +211,7 @@
 		border: none;
 		box-shadow: var(--Neo-Dark-Shadow);
 	}
-	.app-input::placeholder{
+	.app-input::placeholder {
 		text-align: right;
 		font-size: 1rem;
 		font-weight: 500;
@@ -234,7 +248,7 @@
 		width: 350px;
 		border-radius: 20px;
 	}
-	.download-button{
+	.download-button {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -286,8 +300,8 @@
 			opacity: 0;
 		}
 	}
-	@media (min-width: 768px) and (min-width: 1024px){
-		.app-input{
+	@media (min-width: 768px) and (min-width: 1024px) {
+		.app-input {
 			width: 40vw;
 			height: 20vh;
 			padding: 1rem;
