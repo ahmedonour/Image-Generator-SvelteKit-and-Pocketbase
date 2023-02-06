@@ -1,6 +1,10 @@
-<button>
-    <a href="/generatorImage">إبداء اﻷن</a>
-</button>
+<a href="/generatorImage">
+    
+    <button>
+        إبداء اﻷن
+    </button>
+    
+    </a>
 <style>
     
     button{
@@ -12,11 +16,17 @@
         font-weight: 700;
         background-color: rgba(255, 255, 255, 0.25);
         border: 2px solid #000;
+        color: #ffffff;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
     }
-    button a{
-        color: #ffffff;
+    a{
         text-decoration: none;
+        }
+        @media (min-width: 768px) and (min-width: 1024px){
+            button{
+                width: 15vw;
+                cursor: pointer;
+            }
         }
 </style>

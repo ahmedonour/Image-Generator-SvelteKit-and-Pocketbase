@@ -48,7 +48,7 @@
 
 	const generateImage = async () => {
 		await translate();
-		placeholder = `أبحث عن ..${text}`;
+		placeholder = `أنشئ ${text}`;
 		loading = true;
 		const res = await openai.createImage({
 			prompt: translatedText,
@@ -89,8 +89,10 @@
 		<button class="g-btn" on:click={generateImage}> إنشاء صورة </button>
 		<div class="images">
 			{#if result.length > 0}
-				<img class="result-image" src={result} alt="result" />
-				<a class="btn" href={result} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result} alt="result" />
+					<a class="btn" href={result} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			<!-- {#if result1.length > 0}
 				<img class="result-image" src={result1} alt="result" />
@@ -213,6 +215,7 @@
 		color: #fff;
 	}
 	.btn {
+		width: 50%;
 		background-color: transparent;
 		padding: 1rem 1rem;
 		color: #fff;
@@ -221,13 +224,20 @@
 		border: none;
 		border-radius: 10px;
 		box-shadow: var(--Neo-Dark-Shadow);
+		text-decoration: none;
+		text-align: center;
 	}
 	.result-image {
 		margin: 20px;
 		width: 350px;
 		border-radius: 20px;
 	}
-
+	.download-button{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
 	.lds-ripple {
 		display: inline-block;
 		position: relative;
@@ -272,6 +282,13 @@
 			width: 72px;
 			height: 72px;
 			opacity: 0;
+		}
+	}
+	@media (min-width: 768px) and (min-width: 1024px){
+		.app-input{
+			width: 40vw;
+			height: 20vh;
+			padding: 1rem;
 		}
 	}
 </style>

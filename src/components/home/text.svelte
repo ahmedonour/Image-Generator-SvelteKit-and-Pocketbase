@@ -26,4 +26,10 @@
         font-weight: 800;
         text-align: center;
     }
+    @media (min-width: 768px) and (min-width: 1024px){
+        main h1{
+            font-size: 4rem;
+            font-weight: 200;
+        }
+    }
 </style>
