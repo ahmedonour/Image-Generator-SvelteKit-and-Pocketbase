@@ -55,7 +55,7 @@
 		const res = await openai.createImage({
 			prompt: translatedText,
 			n: 10,
-			size: '256x256'
+			size: '1024x1024'
 		});
 		loading = false;
 		result = res.data.data[0].url;
