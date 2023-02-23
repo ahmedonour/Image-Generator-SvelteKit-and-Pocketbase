@@ -30,15 +30,15 @@
 	//AI REQ
 	let prompt = translatedText;
 	let result = '';
-	// let result1 = '';
-	// let result2 = '';
-	// let result3 = '';
-	// let result4 = '';
-	// let result5 = '';
-	// let result6 = '';
-	// let result7 = '';
-	// let result8 = '';
-	// let result9 = '';
+	let result1 = '';
+	let result2 = '';
+	let result3 = '';
+	let result4 = '';
+	let result5 = '';
+	let result6 = '';
+	let result7 = '';
+	let result8 = '';
+	let result9 = '';
 	let loading = false;
 	let placeholder =
 		'مثال : صورة مقربة , استوديو باﻷبيض و اﻷسود للموضوع, إضاءة خلفية مثيرة , 1973 صورة من مجلة لايف';
@@ -54,20 +54,20 @@
 		loading = true;
 		const res = await openai.createImage({
 			prompt: translatedText,
-			n: 1,
+			n: 10,
 			size: '256x256'
 		});
 		loading = false;
 		result = res.data.data[0].url;
-		// result1 = res.data.data[1].url;
-		// result2 = res.data.data[2].url;
-		// result3 = res.data.data[3].url;
-		// result4 = res.data.data[4].url;
-		// result5 = res.data.data[5].url;
-		// result6 = res.data.data[6].url;
-		// result7 = res.data.data[7].url;
-		// result8 = res.data.data[8].url;
-		// result9 = res.data.data[9].url;
+		result1 = res.data.data[1].url;
+		result2 = res.data.data[2].url;
+		result3 = res.data.data[3].url;
+		result4 = res.data.data[4].url;
+		result5 = res.data.data[5].url;
+		result6 = res.data.data[6].url;
+		result7 = res.data.data[7].url;
+		result8 = res.data.data[8].url;
+		result9 = res.data.data[9].url;
 	};
 </script>
 
@@ -109,7 +109,7 @@
 					<a class="btn" href={result} target="_blank" rel="noreferrer" download>تنزيل</a>
 				</div>
 			{/if}
-			<!-- {#if result1.length > 0}
+			{#if result1.length > 0}
 				<img class="result-image" src={result1} alt="result" />
 				<a class="btn" href={result1} target="_blank" rel="noreferrer" download>تنزيل</a>
 			{/if}
@@ -144,7 +144,7 @@
 			{#if result9.length > 0}
 				<img class="result-image" src={result9} alt="result" />
 				<a class="btn" href={result9} target="_blank" rel="noreferrer" download>تنزيل</a>
-			{/if} -->
+			{/if}
 		</div>
 	{/if}
 </main>
