@@ -110,40 +110,58 @@
 				</div>
 			{/if}
 			{#if result1.length > 0}
-				<img class="result-image" src={result1} alt="result" />
-				<a class="btn" href={result1} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result1} alt="result" />
+					<a class="btn" href={result1} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result2.length > 0}
-				<img class="result-image" src={result2} alt="result" />
-				<a class="btn" href={result2} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result2} alt="result" />
+					<a class="btn" href={result2} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result3.length > 0}
-				<img class="result-image" src={result3} alt="result" />
-				<a class="btn" href={result3} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result3} alt="result" />
+					<a class="btn" href={result3} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result4.length > 0}
-				<img class="result-image" src={result4} alt="result" />
-				<a class="btn" href={result4} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result4} alt="result" />
+					<a class="btn" href={result4} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result5.length > 0}
-				<img class="result-image" src={result5} alt="result" />
-				<a class="btn" href={result5} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result5} alt="result" />
+					<a class="btn" href={result5} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result6.length > 0}
-				<img class="result-image" src={result6} alt="result" />
-				<a class="btn" href={result6} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result6} alt="result" />
+					<a class="btn" href={result6} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result7.length > 0}
-				<img class="result-image" src={result7} alt="result" />
-				<a class="btn" href={result7} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result7} alt="result" />
+					<a class="btn" href={result7} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result8.length > 0}
-				<img class="result-image" src={result8} alt="result" />
-				<a class="btn" href={result8} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result8} alt="result" />
+					<a class="btn" href={result8} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 			{#if result9.length > 0}
-				<img class="result-image" src={result9} alt="result" />
-				<a class="btn" href={result9} target="_blank" rel="noreferrer" download>تنزيل</a>
+				<div class="download-button">
+					<img class="result-image" src={result9} alt="result" />
+					<a class="btn" href={result9} target="_blank" rel="noreferrer" download>تنزيل</a>
+				</div>
 			{/if}
 		</div>
 	{/if}
