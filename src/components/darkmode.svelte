@@ -1,11 +1,12 @@
 <script>
+	
 	function toggle() {
 		window.document.body.classList.toggle('dark-mode');
 	}
 </script>
 
 <button on:click={toggle}>
-	<i class="fas fa-sun"></i>
+	<i class="fas fa-sun" />
 </button>
 
 <style>
@@ -13,11 +14,11 @@
 		background-color: transparent;
 		color: #181818;
 	}
-	button{
+	button {
 		background: transparent;
 		outline: transparent;
 		border: none;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		color: #ffffff;
 		cursor: pointer;
 	}

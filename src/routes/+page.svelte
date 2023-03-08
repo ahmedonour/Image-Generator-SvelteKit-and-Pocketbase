@@ -1,17 +1,17 @@
 <script>
 	import Circles from '../components/home/circles.svelte';
-	import Profe from '../components/home/Profe.svelte';	
-	</script>
+	import Profe from '../components/home/Profe.svelte';
+</script>
 
-<main  >
+<main>
 	<Circles />
-	<Profe/>
+	<Profe />
 </main>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 	:global(body) {
-		background-color:#181818;
+		background-color: #181818;
 		color: #ffffff;
 		transition: background-color 1s;
 	}
