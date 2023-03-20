@@ -1,6 +1,7 @@
 <script>
 	import Text from './text.svelte';
 </script>
+
 <main>
 	<div class="circle-1" />
 	<div class="circle-2" />
@@ -10,7 +11,7 @@
 	main {
 		position: absolute;
 		top: 100px;
-		z-index: -1;
+		z-index: -2;
 		display: flex;
 		width: 100vw;
 		height: 70vh;

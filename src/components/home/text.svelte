@@ -10,11 +10,13 @@
 
 <style>
 	main {
-		display: grid;
-		place-items: center;
-		width: 80vw;
-		position: absolute;
-		top: 100px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		/* position: absolute;
+		top: 100px; */
 	}
 	main h1 {
 		font-weight: 300;

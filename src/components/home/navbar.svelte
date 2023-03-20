@@ -3,9 +3,9 @@
 </script>
 
 <nav>
-	<i class="fas fa-bars" />
-	<ul>
-		<i class="fas fa-x" />
+	<button id="open"><i class="fas fa-bars" /></button>
+	<ul id="navDropDown">
+		<button id="close"><i class="fas fa-x" /></button>
 		<li>
 			<Darkmode />
 		</li>
@@ -65,16 +65,16 @@
 		text-decoration: none;
 		font-weight: 800;
 	}
-	nav ul .fa-x {
+	nav ul button .fa-x {
 		display: none;
 	}
-	nav .fa-bars {
+	nav button .fa-bars {
 		display: none;
 	}
 
 	@media screen and (max-width: 768px) {
 		nav ul {
-			display: none;
+			display: flex;
 			position: fixed;
 			top: 0px;
 			left: 0px;
@@ -87,14 +87,14 @@
 			-webkit-backdrop-filter: blur(10px);
 			backdrop-filter: blur(10px);
 		}
-		nav ul .fa-x {
+		nav ul button .fa-x {
 			display: block;
 			position: absolute;
 			top: 20px;
 			left: 20px;
 			font-size: 2rem;
 		}
-		nav .fa-bars {
+		nav button .fa-bars {
 			display: block;
 			font-size: 2rem;
 		}

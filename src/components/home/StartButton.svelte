@@ -1,13 +1,11 @@
-<button>
-	<a href="/Images">
-		إبداء اﻷن
-	</a>
-</button>
+<a href="/Images">
+	<button> إبداء اﻷن </button>
+</a>
 
 <style>
-	a {
+	a button {
 		margin-top: 3rem;
-		padding: .3rem 2rem;
+		padding: 0.3rem 2rem;
 		border-radius: 100px;
 		font-size: 1.5rem;
 		font-weight: 700;
@@ -17,12 +15,13 @@
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
 		text-decoration: none;
+		cursor: pointer;
 	}
-	button{
+	/* button{
 		background-color: transparent;
 		border: none;
 		outline: none;
-	}
+	} */
 	@media (min-width: 768px) and (min-width: 1024px) {
 		/* button {
 			width: 15vw;

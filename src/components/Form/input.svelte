@@ -21,5 +21,7 @@
 		font-weight: 900;
 		text-align: right;
 		box-shadow: var(--Neo-Dark-Shadow);
+		outline: none;
+		color: white;
 	}
 </style>

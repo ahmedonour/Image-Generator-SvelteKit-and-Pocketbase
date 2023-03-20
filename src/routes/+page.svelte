@@ -7,9 +7,9 @@
 
 <main>
 	<Navbar />
-	<Circles />
 	<Profe />
 	<Footer />
+	<Circles />
 </main>
 
 <style>

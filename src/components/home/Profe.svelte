@@ -1,6 +1,7 @@
 <script>
-	import Text from "./text.svelte";
+	import Text from './text.svelte';
 </script>
+
 <main>
 	<Text />
 	<div class="imgProff">
@@ -12,13 +13,11 @@
 </main>
 
 <style>
-	main{
+	main {
 		display: flex;
-		flex-direction: row;
-		
+		flex-direction: column;
 	}
 	.imgProff {
-		margin-top: 5rem;
 		width: 85vw;
 		height: 45vh;
 		display: flex;
@@ -71,8 +70,8 @@
 		img:nth-of-type(4) {
 			display: block;
 		}
-		main {
+		/* main {
 			margin-top: 20rem;
-		}
+		} */
 	}
 </style>
