@@ -22,13 +22,13 @@
 </nav>
 
 <style>
-	:global(body) nav ul li a{
+	:global(body) nav ul li a {
 		color: #fff;
 	}
 	:global(body) nav img:nth-of-type(1) {
 		display: flex;
 	}
-	:global(body.dark-mode) nav ul li a{
+	:global(body.dark-mode) nav ul li a {
 		color: #000;
 	}
 	:global(body.dark-mode) nav img:nth-of-type(2) {
@@ -65,15 +65,15 @@
 		text-decoration: none;
 		font-weight: 800;
 	}
-	nav ul .fa-x{
+	nav ul .fa-x {
 		display: none;
 	}
-	nav .fa-bars{
+	nav .fa-bars {
 		display: none;
 	}
 
-	@media screen and (max-width: 768px){
-		nav ul{
+	@media screen and (max-width: 768px) {
+		nav ul {
 			display: none;
 			position: fixed;
 			top: 0px;
@@ -87,16 +87,16 @@
 			-webkit-backdrop-filter: blur(10px);
 			backdrop-filter: blur(10px);
 		}
-		nav ul .fa-x{
+		nav ul .fa-x {
 			display: block;
 			position: absolute;
 			top: 20px;
 			left: 20px;
 			font-size: 2rem;
 		}
-		nav .fa-bars{
-		display: block;
-		font-size: 2rem;
-	}
+		nav .fa-bars {
+			display: block;
+			font-size: 2rem;
+		}
 	}
 </style>

@@ -1,8 +1,6 @@
 <script>
 	import Text from './text.svelte';
 </script>
-
-<Text />
 <main>
 	<div class="circle-1" />
 	<div class="circle-2" />

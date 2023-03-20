@@ -3,19 +3,13 @@
 	import Navbar from '../components/home/navbar.svelte';
 </script>
 
-<main>
-	<Navbar />
-</main>
 <slot />
-<footer>
-	<Footer />
-</footer>
 
 <style>
-	main {
+	/* main {
 		display: grid;
 		place-items: center;
-	}
+	} */
 	footer {
 		height: 100px;
 		display: flex;

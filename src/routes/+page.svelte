@@ -1,11 +1,15 @@
 <script>
 	import Circles from '../components/home/circles.svelte';
 	import Profe from '../components/home/Profe.svelte';
+	import Navbar from '../components/home/navbar.svelte';
+	import Footer from '../components/footer.svelte';
 </script>
 
 <main>
+	<Navbar />
 	<Circles />
 	<Profe />
+	<Footer />
 </main>
 
 <style>
