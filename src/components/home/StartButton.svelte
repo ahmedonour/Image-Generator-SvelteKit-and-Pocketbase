@@ -3,6 +3,10 @@
 </a>
 
 <style>
+	:global(body.dark-mode) button {
+		background-color: transparent;
+		color: #181818;
+	}
 	a button {
 		margin-top: 3rem;
 		padding: 0.3rem 2rem;

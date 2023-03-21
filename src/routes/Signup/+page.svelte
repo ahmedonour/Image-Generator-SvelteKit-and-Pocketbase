@@ -7,8 +7,7 @@
 		<img src="/img-SignUp.png" alt="" />
 	</div>
 	<form action="">
-		<a href="/"><img src="/Logo-Black.png" alt="logo" class="logo" /></a>
-
+		<a href="/"><img src="/Logo-Black.png" alt="logo" class="logo" /> <img src="/Logo-White.png" alt="logo" class="logo" /></a>
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label>تسجيل حساب</label>
 		<Input type="text" placeholder="إسم" />
@@ -22,6 +21,18 @@
 </main>
 
 <style>
+	:global(body.dark-mode) form a img:nth-of-type(2){
+		display: block;
+	}
+	:global(body.dark-mode) form a img:nth-of-type(1){
+		display: none;
+	}
+	:global(body.dark-mode) input {
+		box-shadow: var(--Neo-Shadow);
+	}
+	form a img:nth-of-type(2){
+		display: none;
+	}
 	main {
 		display: flex;
 	}

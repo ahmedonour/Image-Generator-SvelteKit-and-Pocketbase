@@ -4,11 +4,13 @@
 	import Navbar from '../components/home/navbar.svelte';
 	import Footer from '../components/footer.svelte';
 	import DesktopNavBar from '../components/home/DesktopNavBar.svelte';
+	import Nav from '../components/home/nav.svelte';
 </script>
 
 <main>
 	<!-- <DesktopNavBar /> -->
-	<Navbar />
+	<!-- <Navbar /> -->
+	<Nav />
 	<Profe />
 	<Footer />
 	<Circles />
