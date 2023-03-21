@@ -74,7 +74,7 @@
 	}
 	@media only screen and (max-width: 768px) {
         main {
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: auto;

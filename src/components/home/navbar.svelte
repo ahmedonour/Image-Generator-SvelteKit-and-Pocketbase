@@ -1,14 +1,14 @@
 <script>
 	import Darkmode from '../darkmode.svelte';
 	let visible = true;
-	function toggleVisible() {
-		visible = !visible;
-	}
+	// function toggleVisible() {
+	// 	visible = !visible;
+	// }
 	
 </script>
 
 <nav>
-	<button id="open" on:click={toggleVisible}><i class="fas fa-bars" /></button>
+	<button id="open"><i class="fas fa-bars" /></button>
 	{#if !visible}
 	<ul id="navDropDown">
 		<!-- <button id="close" on:click={toggleVisible}><i class="fas fa-x" /></button> -->
