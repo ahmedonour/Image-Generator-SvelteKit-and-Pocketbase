@@ -1,17 +1,27 @@
 <script>
 	import Darkmode from '../darkmode.svelte';
+	let visible = true;
+	function toggleVisible() {
+		visible = !visible;
+	}
+	
 </script>
 
 <nav>
-	<button id="open"><i class="fas fa-bars" /></button>
+	<button id="open" on:click={toggleVisible}><i class="fas fa-bars" /></button>
+	{#if !visible}
 	<ul id="navDropDown">
-		<button id="close"><i class="fas fa-x" /></button>
+		<!-- <button id="close" on:click={toggleVisible}><i class="fas fa-x" /></button> -->
+		<button id="close" on:click={() => visible = !visible} style={visible ? 'display: none' : 'display: block'}>
+			<i class="fas fa-times"></i>
+		  </button>
 		<li>
 			<Darkmode />
 		</li>
 		<li><a href="/Signup">إنشاء حساب</a></li>
 		<li><a href="/Login">تسجيل الدخول</a></li>
 	</ul>
+	{/if}
 	<div class="logo">
 		<a href="/">
 			<img src="/Logo-Text-1.png" alt="" srcset="" />
@@ -65,9 +75,15 @@
 		text-decoration: none;
 		font-weight: 800;
 	}
-	nav ul button .fa-x {
+	nav button{
+		background: transparent;
+		border: none;
 		display: none;
 	}
+	nav ul button .fa-times {
+		display: none;
+	}
+
 	nav button .fa-bars {
 		display: none;
 	}
@@ -86,8 +102,14 @@
 			background-color: rgba(255, 255, 255, 0.2);
 			-webkit-backdrop-filter: blur(10px);
 			backdrop-filter: blur(10px);
+			transition: all .5s ease-in-out;
 		}
-		nav ul button .fa-x {
+
+		nav button{
+			display: block;
+			color: white;
+		}
+		nav ul button .fa-times {
 			display: block;
 			position: absolute;
 			top: 20px;
