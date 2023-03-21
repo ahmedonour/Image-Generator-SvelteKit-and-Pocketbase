@@ -1,124 +1,132 @@
 <script>
+	import { onMount } from 'svelte';
 	import Darkmode from '../darkmode.svelte';
-	let visible = true;
-	// function toggleVisible() {
-	// 	visible = !visible;
-	// }
-	
+
+	let isNavOpen = false;
+
+	function toggleNav() {
+		isNavOpen = !isNavOpen;
+	}
+
+	function closeNav() {
+		isNavOpen = false;
+	}
+
+	let mediaQuery = null;
+
+	onMount(() => {
+		mediaQuery = window.matchMedia('(min-width: 768px)');
+		mediaQuery.addEventListener('change', closeNav);
+	});
 </script>
 
-<nav>
-	<button id="open"><i class="fas fa-bars" /></button>
-	{#if !visible}
-	<ul id="navDropDown">
-		<!-- <button id="close" on:click={toggleVisible}><i class="fas fa-x" /></button> -->
-		<button id="close" on:click={() => visible = !visible} style={visible ? 'display: none' : 'display: block'}>
-			<i class="fas fa-times"></i>
-		  </button>
-		<li>
+<header>
+	<nav class:open={isNavOpen}>
+		<a href="/"><img src="/Logo-Black.png" alt="" /></a>
+		<ul>
+			<button on:click={closeNav}>
+				<span>Close</span>
+			</button>
+			<!-- <li><a href="/">Home</a></li> -->
 			<Darkmode />
-		</li>
-		<li><a href="/Signup">إنشاء حساب</a></li>
-		<li><a href="/Login">تسجيل الدخول</a></li>
-	</ul>
-	{/if}
-	<div class="logo">
-		<a href="/">
-			<img src="/Logo-Text-1.png" alt="" srcset="" />
+			<li><a href="/Login">تسجيل الدخول</a></li>
+			<li><a href="/Signup">تسجيل حساب</a></li>
+		</ul>
+	</nav>
 
-			<img src="/Logo-Text.png" alt="" srcset="" />
-		</a>
-	</div>
-</nav>
+	<button on:click={toggleNav}>
+		<span>Menu</span>
+	</button>
+</header>
 
-<style>
-	:global(body) nav ul li a {
-		color: #fff;
-	}
-	:global(body) nav img:nth-of-type(1) {
+<style>	*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+	header {
 		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		/* padding: 1rem; */
+		/* background-color: #333; */
+		color: white;
+		width: 70vw;
 	}
-	:global(body.dark-mode) nav ul li a {
-		color: #000;
+	header a {
+		/* background-color: aquamarine; */
+
+		width: 7vw;
 	}
-	:global(body.dark-mode) nav img:nth-of-type(2) {
-		display: flex;
-	}
-	:global(body.dark-mode) nav img:nth-of-type(1) {
-		display: none;
+	header a img {
+		width: 100%;
 	}
 	nav {
-		margin-top: 1rem;
-		width: 80vw;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
 		display: flex;
+		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
+		background-color: #3333332c;
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		color: white;
+		transform: translateX(-100%);
+		transition: transform 0.3s ease-out;
+		z-index: 5;
 	}
-	nav img {
-		width: 100px;
+
+	nav.open {
+		transform: translateX(0);
 	}
-	nav img:nth-of-type(1) {
-		display: none;
-	}
-	nav img:nth-of-type(2) {
-		display: none;
-	}
-	nav ul {
+
+	ul {
 		list-style: none;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: space-between;
-		width: 20vw;
 	}
-	nav ul li a {
-		color: #fff;
+
+	li {
+		margin: 1rem 0;
+	}
+
+	a {
+		color: white;
 		text-decoration: none;
-		font-weight: 800;
+		font-weight: bold;
 	}
-	nav button{
-		background: transparent;
+
+	button {
+		background: none;
 		border: none;
-		display: none;
-	}
-	nav ul button .fa-times {
-		display: none;
-	}
-
-	nav button .fa-bars {
-		display: none;
+		color: white;
+		font-size: 1.2rem;
+		cursor: pointer;
 	}
 
-	@media screen and (max-width: 768px) {
-		nav ul {
-			display: flex;
-			position: fixed;
-			top: 0px;
-			left: 0px;
-			flex-direction: column;
-			justify-content: center;
-			z-index: 9999;
-			width: 100vw;
-			height: 100vh;
-			background-color: rgba(255, 255, 255, 0.2);
-			-webkit-backdrop-filter: blur(10px);
-			backdrop-filter: blur(10px);
-			transition: all .5s ease-in-out;
+	@media (min-width: 768px) {
+		nav {
+			position: static;
+			transform: translateX(0);
+			background-color: transparent;
 		}
 
-		nav button{
-			display: block;
-			color: white;
+		ul {
+			flex-direction: row;
 		}
-		nav ul button .fa-times {
-			display: block;
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			font-size: 2rem;
+
+		li {
+			margin: 0 1rem;
 		}
-		nav button .fa-bars {
-			display: block;
-			font-size: 2rem;
+
+		button {
+			display: none;
 		}
 	}
 </style>

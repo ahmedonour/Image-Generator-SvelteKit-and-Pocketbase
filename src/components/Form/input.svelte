@@ -24,8 +24,8 @@
 		outline: none;
 		color: white;
 	}
-	@media (max-width: 768px){
-		input{
+	@media (max-width: 768px) {
+		input {
 			width: 70vw;
 		}
 	}

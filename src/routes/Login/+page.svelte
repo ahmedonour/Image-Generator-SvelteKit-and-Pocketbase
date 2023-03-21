@@ -4,20 +4,18 @@
 
 <main>
 	<div class="left-image">
-		<a href="/">
-            <img src="/img-login.png" alt="" />
-        </a>
+		<img src="/img-login.png" alt="" />
 	</div>
 	<form action="">
-		<img src="/Logo-Black.png" alt="logo" class="logo" />
+		<a href="/"><img src="/Logo-Black.png" alt="logo" class="logo" /></a>
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label>تسجيل الدخول</label>
 		<Input type="text" placeholder="إسم" />
 		<Input type="password" placeholder="كلمة السر" />
 		<div class="remmberMe"><input type="checkbox" /> <label for="">تذكرني</label></div>
 		<input type="submit" value="تسجيل" class="submit" />
+		<p>ليس لديك حساب ؟ <a href="/Signup">تسجيل حساب</a></p>
 	</form>
-	<p>ليس لديك حساب ؟ <a href="/Signup">تسجيل حساب</a></p>
 </main>
 
 <style>
@@ -27,13 +25,11 @@
 	.logo {
 		width: 100px;
 	}
-    
+
 	.left-image {
 		height: 100vh;
 	}
-    .left-image a{
-        cursor: pointer;
-    }
+
 	.left-image img {
 		height: 100%;
 	}
@@ -76,14 +72,19 @@
 		box-shadow: var(--Neo-Dark-Shadow);
 		cursor: pointer;
 	}
+	form p a {
+		font-weight: 800;
+		color: #808080;
+	}
 	@media only screen and (max-width: 768px) {
-        main {
-            flex-direction: column-reverse;
-            align-items: center;
-            justify-content: center;
-            height: 90vh;
-        }
-        /* .left-image {
+		main {
+			flex-direction: column-reverse;
+			align-items: center;
+			justify-content: center;
+			height: 90vh;
+		}
+
+		/* .left-image {
             height: auto;
             width: 100%;
             text-align: center;
@@ -93,23 +94,22 @@
             height: auto;
             max-width: 80%;
         } */
-		.left-image img{
+		.left-image img {
 			display: none;
-
 		}
-        form {
-            width: 80%;
-            height: auto;
-            margin-top: 1rem;
-        }
-        form label {
-            font-size: 1.2rem;
-        }
-        form .remmberMe {
-            width: 100%;
-        }
-        form .submit {
-            width: 100%;
-        }
-    }
+		form {
+			width: 80%;
+			height: auto;
+			margin-top: 1rem;
+		}
+		form label {
+			font-size: 1.2rem;
+		}
+		form .remmberMe {
+			width: 100%;
+		}
+		form .submit {
+			width: 100%;
+		}
+	}
 </style>
