@@ -1,10 +1,11 @@
 <script>
 	export let type;
 	export let placeholder;
+	export let name;
 </script>
 
 <main>
-	<input {type} {placeholder} />
+	<input {type} {placeholder} {name} />
 </main>
 
 <style>

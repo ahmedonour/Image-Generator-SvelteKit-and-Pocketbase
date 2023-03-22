@@ -6,14 +6,14 @@
 	<div class="left-image">
 		<img src="/img-SignUp.png" alt="" />
 	</div>
-	<form action="">
+	<form action="?/Signup" method="POST">
 		<a href="/"><img src="/Logo-Black.png" alt="logo" class="logo" /> <img src="/Logo-White.png" alt="logo" class="logo" /></a>
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label>تسجيل حساب</label>
-		<Input type="text" placeholder="إسم" />
-		<Input type="password" placeholder="كلمة السر" />
-		<Input type="password" placeholder="إعادة إدخال كلمة السر" />
-		<Input type="text" placeholder="البريد اﻹلكتروني" />
+		<Input type="text" placeholder="إسم" name="name"/>
+		<Input type="password" placeholder="كلمة السر" name="password"/>
+		<Input type="password" placeholder="إعادة إدخال كلمة السر" name="passwordConfirm"/>
+		<Input type="email" placeholder="البريد اﻹلكتروني" name="email"/>
 		<div class="remmberMe"><input type="checkbox" /> <label for="">تذكرني</label></div>
 		<input type="submit" value="تسجيل" class="submit" />
 		<p>لديك حساب ؟ <a href="/Login">تسجيل الدخول</a></p>
@@ -105,6 +105,9 @@
             height: auto;
             max-width: 80%;
         } */
+		.left-image{
+			display: none;
+		}
 		.left-image img {
 			display: none;
 		}
