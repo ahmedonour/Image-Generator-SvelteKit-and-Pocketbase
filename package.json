@@ -26,6 +26,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/auth-helpers-sveltekit": "^0.10.2",
+		"@supabase/auth-ui-shared": "^0.1.6",
+		"@supabase/auth-ui-svelte": "^0.2.2",
+		"@supabase/supabase-js": "^2.33.1",
 		"axios": "^1.2.5",
 		"openai": "^3.1.0",
 		"pocketbase": "^0.12.1"

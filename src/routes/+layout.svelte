@@ -1,19 +1,22 @@
-<script>
-	import Footer from '../components/footer.svelte';
-	import Navbar from '../components/home/navbar.svelte';
+<!-- src/routes/+layout.svelte -->
+<script lang="ts">
+	import { invalidate } from '$app/navigation'
+	import { onMount } from 'svelte'
+
+	export let data
+
+	let { supabase, session } = data
+	$: ({ supabase, session } = data)
+
+	onMount(() => {
+		const { data } = supabase.auth.onAuthStateChange((event, _session) => {
+			if (_session?.expires_at !== session?.expires_at) {
+				invalidate('supabase:auth')
+			}
+		})
+
+		return () => data.subscription.unsubscribe()
+	})
 </script>
 
 <slot />
-
-<style>
-	/* main {
-		display: grid;
-		place-items: center;
-	} */
-	footer {
-		height: 100px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-</style>
